@@ -125,6 +125,18 @@
                                 <rect key="frame" x="30" y="454" width="302" height="114"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2c-NQ-GWf">
+                                <rect key="frame" x="98" y="585" width="143" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="buyNowBtn"/>
+                                <connections>
+                                    <action selector="buyNowBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yfh-qG-fgc"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="y4Z-Uh-chd">
+                                <rect key="frame" x="98" y="230" width="185" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -146,10 +158,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="9Om-zB-CRq" id="KAt-Q0-RLy"/>
+                        <outlet property="addressText" destination="atj-ey-Ggz" id="cZ8-fV-bsO"/>
+                        <outlet property="cityLabel" destination="kaZ-Rw-8sw" id="yAH-8h-c0V"/>
+                        <outlet property="cityText" destination="da3-0Y-6pG" id="N2e-mJ-OSG"/>
+                        <outlet property="fullNameLabel" destination="n6Q-17-LQJ" id="DaF-Zs-2ho"/>
+                        <outlet property="fullNameText" destination="DI4-u5-1im" id="GJU-E0-hdC"/>
                         <outlet property="label1" destination="Sd6-oX-COh" id="VRX-zE-skB"/>
                         <outlet property="label2" destination="1uv-4c-6VV" id="gD6-nS-Oi8"/>
+                        <outlet property="stateLabel" destination="yje-0I-ReW" id="kYu-Lh-iz3"/>
                         <outlet property="statePicker" destination="ldM-7k-Spd" id="zaJ-Bt-Ndr"/>
                         <outlet property="statePickerBtn" destination="nYg-cs-ld4" id="omz-0k-UHs"/>
+                        <outlet property="successImage" destination="y4Z-Uh-chd" id="UvS-z6-bnm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -158,6 +178,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="buyNowBtn" width="225" height="45"/>
         <image name="miraclePillEmoji" width="90" height="90"/>
+        <image name="successIndicator" width="180" height="180"/>
     </resources>
 </document>

@@ -14,6 +14,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var statePicker: UIPickerView!
     @IBOutlet weak var statePickerBtn: UIButton!
     
+    @IBOutlet weak var stateLabel: UILabel!
+    @IBOutlet weak var cityText: UITextField!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var addressText: UITextField!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var fullNameText: UITextField!
+    @IBOutlet weak var fullNameLabel: UILabel!
+    @IBOutlet weak var successImage: UIImageView!
     let states = ["Alaska","Arkansas", "Alabama","California","Maine","New York"]
     
     override func viewDidLoad() {
@@ -32,6 +40,21 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         statePicker.isHidden = false
         label1.isHidden = true
         label2.isHidden = true
+    }
+    @IBAction func buyNowBtn(_ sender: Any) {
+        successImage.isHidden = false
+        label1.isHidden = true
+        label2.isHidden = true
+        statePicker.isHidden = true
+        statePickerBtn.isHidden = true
+        stateLabel.isHidden = true
+        cityText.isHidden = true
+        cityLabel.isHidden = true
+        addressText.isHidden = true
+        addressLabel.isHidden = true
+        fullNameText.isHidden = true
+        fullNameLabel.isHidden = true
+        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
